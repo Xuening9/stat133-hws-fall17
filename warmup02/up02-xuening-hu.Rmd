@@ -1,0 +1,98 @@
+---
+title: "up02-xuening-hu"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+#load the objects
+load("nba2017-salary-points.RData")
+```
+
+#SUMMARY
+##For all numeric vectors
+###experience
+```{r}
+summary(experience)
+```
+###salary
+```{r}
+summary(salary)
+```
+###points
+```{r}
+summary(points)
+summary(points1)
+summary(points2)
+summary(points3)
+```
+
+#What are the typical values in each vector?
+- mean  
+- standard deviation  
+- minimum value  
+- maximum value  
+- median  
+- 1st and 3rd quartiles  
+
+##Standard Deviation
+```{r}
+sd(salary)
+sd(points)
+sd(points1)
+sd(points2)
+sd(points3)
+```
+#What's the spread in each vector?
+- the salary has a large standard deviation which means it has a large difference between the content numbers.
+- the points3 has the smallest standard deviation among points, which means the content numbers are closed to the average and evenly.
+
+#Graph
+```{r}
+hist(salary)
+boxplot(salary)
+```
+#frequency table
+```{r}
+table(team)
+```
+#relative frequency table
+```{r}
+f.table=table(team)
+rf.table=f.table/length(team)
+```
+#frequency Graph
+```{r}
+barplot(f.table)
+barplot(rf.table)
+```
+#description of the graph
+##What is the overall shape?
+- the graph of the frequency of salary goes all way down. 
+- the graph of the frequency of team has the same shape with the relative frequency table.
+##What is the typical center?
+
+##Overall range, along with an interval of typical measurements.
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
