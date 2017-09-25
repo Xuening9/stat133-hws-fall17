@@ -157,11 +157,11 @@ install.packages("scatterplot3d", repos = "http://cran.us.r-project.org")
     ## package 'scatterplot3d' successfully unpacked and MD5 sums checked
     ## 
     ## The downloaded binary packages are in
-    ##  C:\Users\Xuening\AppData\Local\Temp\RtmpCItJzG\downloaded_packages
+    ##  C:\Users\Xuening\AppData\Local\Temp\RtmpYNGU6I\downloaded_packages
 
 ``` r
 library(scatterplot3d)
-scatterplot3d(x = points, y = salary_m, z = experience_int, color = "pink", main = "3D Scatterplot", ylab = "year of experience", zlab = "salary(millions)")
+scatterplot3d(x = points, y = salary_m, z = experience_int, color = "blue", main = "3D Scatterplot", ylab = "year of experience", zlab = "salary(millions)")
 ```
 
 ![](hw01-xuening-hu_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-10-1.png)
@@ -170,7 +170,10 @@ scatterplot3d(x = points, y = salary_m, z = experience_int, color = "pink", main
 boxplot(salary_m~position_factor)
 ```
 
-![](hw01-xuening-hu_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-10-2.png) +Description and analysis for the plots here +
+![](hw01-xuening-hu_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-10-2.png)
+
+-   Description and analysis for the plots here
+-   the more point in player scores, the more salary he gets.
 
 Question 8)
 -----------
@@ -179,6 +182,18 @@ Question 8)
     -   Utilizing the parameters and adjust the plots
 -   What things were easy
 
-+Experience with git: useful + Keep track of every commit + Cooperation +Help for the assignment? Yes. + Help with some usage of functions +How much time + More than 6 hours +Most time consuming part + Graph +Anything not understood
+-   Experience with git: useful
+    -   Keep track of every commit
+    -   Cooperation
+-   Help for the assignment? Yes.
+    -   Help with some usage of functions
+-   How much time
+    -   More than 6 hours
+-   Most time consuming part
+    -   Graph
+-   Anything not understood
 
-+Frustrating? + None +Exciting? + Struggling instead...
+-   Frustrating?
+    -   None
+-   Exciting?
+    -   Struggling instead...

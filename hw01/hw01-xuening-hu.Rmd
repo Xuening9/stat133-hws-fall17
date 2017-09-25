@@ -110,31 +110,31 @@ lines(lowess(experience_int, salary_m), lwd = 2.5, col = "red")
 ```{r}
 install.packages("scatterplot3d", repos = "http://cran.us.r-project.org")
 library(scatterplot3d)
-scatterplot3d(x = points, y = salary_m, z = experience_int, color = "pink", main = "3D Scatterplot", ylab = "year of experience", zlab = "salary(millions)")
+scatterplot3d(x = points, y = salary_m, z = experience_int, color = "blue", main = "3D Scatterplot", ylab = "year of experience", zlab = "salary(millions)")
 
 boxplot(salary_m~position_factor)
 ```
 
-+Description and analysis for the plots here
-  +
++ Description and analysis for the plots here
+  + the more point in player scores, the more salary he gets.
 
 ##Question 8)
 + What things were hard
     + Utilizing the parameters and adjust the plots
 + What things were easy
    
-+Experience with git: useful
++ Experience with git: useful
     + Keep track of every commit
     + Cooperation
-+Help for the assignment? Yes.
++ Help for the assignment? Yes.
     + Help with some usage of functions
-+How much time
++ How much time
     + More than 6 hours
-+Most time consuming part
++ Most time consuming part
     + Graph
-+Anything not understood
++ Anything not understood
     
-+Frustrating?
++ Frustrating?
     + None
-+Exciting?
++ Exciting?
     + Struggling instead...
