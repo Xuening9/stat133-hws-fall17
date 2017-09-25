@@ -1,0 +1,140 @@
+---
+title: "Hw01-xuening-hu"
+output: github_document
+---
+
+### Set up working directory for all chunks 
+```{r setup}
+knitr::opts_chunk$set(root.dir = "/Users/Xuening/STAT133/stat133-hws-fall17/hw01")
+```
+```{r}
+getwd()
+
+load("nba2017-salary-points.RData")
+ls()
+```
+
+##Question 1)
+```{r}
+# salary in million
+salary_m = as.numeric(format(round(salary / 1000000,2),nsmall <- 2))
+# replace R by 0
+experience_int = replace(experience, experience == "R", "0")
+#new position factor
+position_factor = factor(position, labels = c("center", "power_fwd", "point_guard", "small_fwd", "shoot_guard"))
+#frequency table
+table(position_factor)
+```
+
+##Question 2)
+```{r}
+plot(points, salary_m, cex = 0.7, col = "red", main = "Scatterplot of Points and Salary")
+```
+
+##Question 3)
+```{r}
+n = length(player)
+
+mean_points = mean(points)
+mean_points = sum(points)/n
+
+mean_salary = mean(salary_m)
+mean_salary = sum(salary_m)/n
+
+var_points = var(points)
+var_points = sum((points - mean_points) ^ 2) / (n - 1)
+
+var_salary = var(salary_m)
+var_salary = sum((salary_m - mean_salary) ^ 2) / (n - 1)
+
+sd_points = sd(points)
+sd_points = sqrt(var_points)
+
+sd_salary = sd(salary_m)
+sd_salary = sqrt(var_salary)
+
+cov_points_salary = cov(points, salary_m)
+cov_points_salary = sum((points - mean_points) * (salary_m - mean_salary)) / (n - 1)
+
+cor_points_salary = cor(points, salary_m)
+cor_points_salary = cov_points_salary / (sd_points * sd_salary)
+```
+
+##Question 4)
+```{r}
+b1 = cor_points_salary * (sd_salary / sd_points)
+b0 = mean_salary - b1 * mean_points
+y_hat = b0 + b1 * points
+
+summary(y_hat)
+```
+
++SO the regression equation is salary = `r b0` + `r b1` * points . For increasing of each 1 unit, the salary increase  by `r b1` unit. When points = 0, salary = `r b0`. 
+
++The predicted salary is the folloing:
+```{r, echo=FALSE}
+b0 + b1 * 0
+b0 + b1 * 100
+b0 + b1 * 500
+b0 + b1 * 1000
+b0 + b1 * 2000
+```
+
+##Question 5)
+```{r}
+plot(points, salary_m, abline(b0, b1, col = "red", lwd = 2), col = "gray", cex = 0.7, lwd = 0.7, main = "Regression and lowess lines")
+lines(lowess(points, salary_m))
+text(x = 2000, y = 30, labels = "lowess")
+text(x = 2300, y = 15, labels = "regression", col = "red")
+```
+
+##Question 6)
+```{r}
+# residual
+r_residuals = salary_m - y_hat
+summary(r_residuals)
+# residual sum of squares
+rss = sum(r_residuals * r_residuals)
+# total sum of squares
+tss = sum((salary_m - mean_salary) * (salary_m - mean_salary))
+# coefficient of determination
+rsquare = 1 - rss / tss
+```
+
+##Question 7)
+```{r}
+plot(experience_int, salary_m, ylab = "salary", xlab = "years of experience", cex = 0.7, col = "grey", main = "scatterplot with lowess smooth")
+lines(lowess(experience_int, salary_m), lwd = 2.5, col = "red")
+```
+
+```{r}
+install.packages("scatterplot3d", repos = "http://cran.us.r-project.org")
+library(scatterplot3d)
+scatterplot3d(x = points, y = salary_m, z = experience_int, color = "pink", main = "3D Scatterplot", ylab = "year of experience", zlab = "salary(millions)")
+
+boxplot(salary_m~position_factor)
+```
+
++Description and analysis for the plots here
+  +
+
+##Question 8)
++ What things were hard
+    + Utilizing the parameters and adjust the plots
++ What things were easy
+   
++Experience with git: useful
+    + Keep track of every commit
+    + Cooperation
++Help for the assignment? Yes.
+    + Help with some usage of functions
++How much time
+    + More than 6 hours
++Most time consuming part
+    + Graph
++Anything not understood
+    
++Frustrating?
+    + None
++Exciting?
+    + Struggling instead...
