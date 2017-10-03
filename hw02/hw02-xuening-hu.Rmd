@@ -147,8 +147,6 @@ abline(h =0)
 ```{r}
 player2 <- filter(dat1,dat1$MPG >=20)
 
-player2
-
 plot(player2$EFF, player2$Salary,ylab = "Salary", xlab = "Efficiency", xlim = c(),cex = 0.7, col = "grey", main = "scatterplot with lowess smooth")
 lines(lowess(player2$EFF, player2$Salary,), lwd = 2.5, col = "red")
 
