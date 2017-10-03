@@ -145,10 +145,12 @@ abline(h =0)
 ##5) Efficiency and Salary
 
 ```{r}
-player2 <- filter(dat1,dat1$MPG >= 20)
+player2 <- filter(dat1,dat1$MPG >=20)
 
-plot(dat1$EFF, dat1$Salary,ylab = "Salary", xlab = "Efficiency", cex = 0.7, col = "grey", main = "scatterplot with lowess smooth")
-lines(lowess(dat1$EFF,dat1$Salary,), lwd = 2.5, col = "red")
+player2
+
+plot(player2$EFF, player2$Salary,ylab = "Salary", xlab = "Efficiency", xlim = c(),cex = 0.7, col = "grey", main = "scatterplot with lowess smooth")
+lines(lowess(player2$EFF, player2$Salary,), lwd = 2.5, col = "red")
 
 correlation3 <- cor(player2$EFF, player2$Salary)
 correlation3
