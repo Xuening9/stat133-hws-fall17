@@ -13,7 +13,7 @@ The History of Statistics and Data Visualization
 
 > -   The general introduction of the Statisics and data visualization
 > -   How data visualization affect the advance of statistics
-> -   A few example of data visualization, such as tabling, histogram,
+> -   A few example of data visualization, such as maping,pie-graph
 
 Introduction
 ------------
@@ -90,6 +90,7 @@ Content
 ![Earliest Visualization](http://www.math.yorku.ca/SCS/Gallery/images/oldest-map_s.jpg)
 
 ![Planetary movements shown](http://www.math.yorku.ca/SCS/Gallery/icons/planetenkl.gif)
+
 Figure 2: Planetary movements shown as cyclic inclinations over time, by an unknown astronomer,
 appearing in a 10th century appendix to commentaries by A. T. Macrobius on Cicero’s
 In Somnium Scripionus. Source: Funkhouser (1936, p. 261).
@@ -152,6 +153,7 @@ Funny graph
 -----------
 
 [Making map step by step](http://www.kevjohnson.org/making-maps-in-r/)
+
 [Short interactive lines video](http://www.youtube.com/watch?v=IFYVDCWr1XQ/)
 
 Take-home message

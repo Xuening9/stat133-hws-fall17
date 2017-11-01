@@ -17,7 +17,7 @@ setwd("/Users/Xuening/STAT133/stat133-hws-fall17/post1")
 #The History of Statistics and Data Visualization
 > - The general introduction of the Statisics and data visualization
 > - How data visualization affect the advance of statistics
-> - A few example of data visualization, such as tabling, histogram, 
+> - A few example of data visualization, such as maping,pie-graph 
 
 ##Introduction
 - Can you imagine that you have to remember all the probabilities of the normal \
@@ -89,10 +89,12 @@ data in the entire process (Capuder 2871).
 
 
 ###Image
-![Earliest Visualization](http://www.math.yorku.ca/SCS/Gallery/images/oldest-map_s.jpg) 
+![Earliest Visualization](http://www.math.yorku.ca/SCS/Gallery/images/oldest-map_s.jpg) \
 
 
 ![Planetary movements shown](http://www.math.yorku.ca/SCS/Gallery/icons/planetenkl.gif) \
+
+
 Figure 2: Planetary movements shown as cyclic inclinations over time, by an unknown astronomer, \
 appearing in a 10th century appendix to commentaries by A. T. Macrobius on Cicero¡¯s \
 In Somnium Scripionus. Source: Funkhouser (1936, p. 261).
@@ -136,6 +138,8 @@ step1_5
 
 ##Funny graph
 [Making map step by step](http://www.kevjohnson.org/making-maps-in-r/) \
+
+
 [Short interactive lines video](http://www.youtube.com/watch?v=IFYVDCWr1XQ/) \
 
 
@@ -159,7 +163,9 @@ becomes a high-quality resource that will easily help them doing their tasks.
 
 ##Source
 [A Brief History of Data Visualization](http://www.datavis.ca/papers/hbook.pdf) \
+
 [Milestone project](http://www.math.yorku.ca/SCS/Gallery/milestone/milestone.pdf) \
+
 **Three More** sources as pdf are put in the post 1 file on the Github, \
 please check if you interested \
 
