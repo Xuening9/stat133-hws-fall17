@@ -8,13 +8,10 @@ setwd("/Users/Xuening/stat133/stat133-hws-fall17/hw04/code")
 # - returns the input vector without missing values
 
 remove_missing <- function(a){
-  if(is.numeric(a)){
-  a = a[!is.na(a)]
-  return(a)
-  }
-  else{
+  if(!is.numeric(a)){
     stop("the vector is not numeric")
   }
+  return(a[which(!is.na(a))])
 }
 
 #- get_minimum()
@@ -77,7 +74,7 @@ get_percentile10 <- function(a,na.rm = TRUE){
     }
   }
   b <- remove_missing(a)
-  b <-  quantile(b,0.1)
+  b <-  0.1 * get_range(a, na.rm = TRUE) + get_minimum(a, na.rm = TRUE)
   return(b)
 }
 
@@ -92,7 +89,7 @@ get_percentile90 <- function(a,na.rm = TRUE){
     }
   }
  b <- remove_missing(a)
- b <-  quantile(b,0.9)
+ b <- 0.9 * get_range(a, na.rm = TRUE) + get_minimum(a, na.rm = TRUE)
   return(b)
 }
 
@@ -170,7 +167,7 @@ get_quartile1 <- function(a, na.rm = TRUE) {
     }
   }
   b <- remove_missing(a)
-  b <- quantile(b, 0.25)
+  b <- 0.25 * get_range(a, na.rm = TRUE) + get_minimum(a, na.rm = TRUE)
   return(b)
 }
 
@@ -186,7 +183,7 @@ get_quartile3 <- function(a, na.rm = TRUE) {
     }
   }
   b <- remove_missing(a)
-  b <- quantile(b, 0.75)
+  b <- 0.75 * get_range(a, na.rm = TRUE) + get_minimum(a, na.rm = TRUE)
   return(b)
 }
 
