@@ -1,1 +1,12 @@
-minimum  : 18.0000<br/>percent10: 53.0000<br/>quartile1: 69.0000<br/>median   : 80.0000<br/>mean     : 75.9138<br/>quartile3: 87.0000<br/>percent90: 93.7000<br/>maximum  : 100.0000<br/>range    : 82.0000<br/>stdev    : 15.8822<br/>missing  : 0.0000<br/>[1] "minimum  : 18.0000<br/>percent10: 53.0000<br/>quartile1: 69.0000<br/>median   : 80.0000<br/>mean     : 75.9138<br/>quartile3: 87.0000<br/>percent90: 93.7000<br/>maximum  : 100.0000<br/>range    : 82.0000<br/>stdev    : 15.8822<br/>missing  : 0.0000<br/>"
+ minimum   : 18.0000 
+ percent10 : 53.0000 
+ quartile1 : 69.0000 
+ median    : 80.0000 
+ mean      : 75.9138 
+ quartile3 : 87.0000 
+ percent90 : 93.7000 
+ maximum   : 100.0000 
+ range     : 82.0000 
+ stdev     : 15.8822 
+ missing   : 0.0000 
+

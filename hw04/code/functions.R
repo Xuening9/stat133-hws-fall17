@@ -228,15 +228,16 @@ print_stats <- function(a) {
   b <- summary_stats(a)
   ret <- ''
   for (i in 1:11) {
-    ret <- paste(ret, format(names(b[i]), 
+    ret <- paste(ret, 
+                 format(names(b[i]), 
                              width = 9, 
-                             justify = "left"), ": ",
+                             justify = "left"), ":",
                  formatC(as.numeric(b[i]), 
                          format = "f", digits = 4, 
-                         flag = "0"), '<br/>', sep = "")
+                         flag = "0"),"\n", sep = " ")
   }
-  cat(ret)
-  return(ret)
+  cat(ret,sep = "\n")
+  #return(ret)
 }
 
 #- rescale100()
