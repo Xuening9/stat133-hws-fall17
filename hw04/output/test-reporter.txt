@@ -14,19 +14,8 @@ summary_stats: ...
 print_stats: 
 rescale100: ....
 drop_lowest: ....
-score_homework: ...1
-score_quiz: ...2
+score_homework: ....
+score_quiz: ....
 score_lab: .......
 
-Failed -------------------------------------------------------
-1. Failure: with NA (@tests.R#323) ---------------------------
-error$message does not match "NA exists".
-Actual value: ""
-
-
-2. Failure: with NA (@tests.R#342) ---------------------------
-error$message does not match "NA exists".
-Actual value: ""
-
-
-DONE =========================================================
+DONE ==================================================================
