@@ -1,0 +1,101 @@
+remove_missing: ....
+get_minimum: ..12
+get_maximum: ..34
+get_range: .56.
+get_percentile10: .78.
+get_percentile90: .9a.
+get_median: .bc..
+get_average: ...d
+get_stdev: ....
+get_quartile1: .ef.
+get_quartile3: FEEE
+count_missing: ....
+summary_stats: .EE
+print_stats: 
+rescale100: ....
+drop_lowest: ....
+score_homework: ...F
+score_quiz: ...F
+score_lab: .......
+
+Failed -------------------------------------------------------
+1. Error: with NA, with removing (@tests.R#50) ---------------
+unused argument (na.rm = TRUE)
+1: expect_equal(get_minimum(test_data_NA, na.rm = TRUE), 1) at tests.R:50
+2: compare(object, expected, ...)
+
+2. Error: with NA, without removing (@tests.R#54) ------------
+unused argument (na.rm = FALSE)
+1: expect_equal(get_minimum(test_data_NA, na.rm = FALSE), NA) at tests.R:54
+2: compare(object, expected, ...)
+
+3. Error: with NA, with removing (@tests.R#69) ---------------
+unused argument (na.rm = TRUE)
+1: expect_equal(get_maximum(test_data_NA, na.rm = TRUE), 10) at tests.R:69
+2: compare(object, expected, ...)
+
+4. Error: with NA, without removing (@tests.R#73) ------------
+unused argument (na.rm = FALSE)
+1: expect_equal(get_maximum(test_data_NA, na.rm = FALSE), NA) at tests.R:73
+2: compare(object, expected, ...)
+
+5. Error: without NA (@tests.R#84) ---------------------------
+unused argument (na.rm = TRUE)
+1: expect_equal(get_range(test_data), 9) at tests.R:84
+2: compare(object, expected, ...)
+3: get_range(test_data)
+
+6. Error: with NA, with removing (@tests.R#88) ---------------
+unused argument (na.rm = TRUE)
+1: expect_equal(get_range(test_data_NA, na.rm = TRUE), 9) at tests.R:88
+2: compare(object, expected, ...)
+3: get_range(test_data_NA, na.rm = TRUE)
+
+7. Failure: without NA (@tests.R#103) ------------------------
+get_percentile10(test_data) not equal to 1.9.
+names for target but not for current
+
+
+8. Failure: with NA, with removing (@tests.R#107) ------------
+get_percentile10(test_data_NA, na.rm = TRUE) not equal to 1.9.
+names for target but not for current
+
+
+9. Failure: without NA (@tests.R#122) ------------------------
+get_percentile90(test_data) not equal to 9.1.
+names for target but not for current
+
+
+10. Failure: with NA, with removing (@tests.R#126) -----------
+get_percentile90(test_data_NA, na.rm = TRUE) not equal to 9.1.
+names for target but not for current
+
+
+11. Error: without NA (@tests.R#141) -------------------------
+object 'temp' not found
+1: expect_equal(get_median(test_data), 5.5) at tests.R:141
+2: compare(object, expected, ...)
+3: get_median(test_data)
+
+12. Error: with NA, with removing (@tests.R#145) -------------
+object 'temp' not found
+1: expect_equal(get_median(test_data_NA, na.rm = TRUE), 5.5) at tests.R:145
+2: compare(object, expected, ...)
+3: get_median(test_data_NA, na.rm = TRUE)
+
+13. Error: with NA, without removing (@tests.R#172) ----------
+unused argument (na.rm = FALSE)
+1: expect_equal(get_maximum(test_data_NA, na.rm = FALSE), NA) at tests.R:172
+2: compare(object, expected, ...)
+
+14. Failure: without NA (@tests.R#202) -----------------------
+get_quartile1(test_data) not equal to 3.25.
+names for target but not for current
+
+
+15. Failure: with NA, with removing (@tests.R#206) -----------
+get_quartile1(test_data_NA, na.rm = TRUE) not equal to 3.25.
+names for target but not for current
+
+
+DONE =========================================================
