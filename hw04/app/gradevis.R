@@ -19,6 +19,7 @@ library(shiny)
 library(readr)
 library(ggvis)
 library(dplyr)
+
 setwd("/Users/Xuening/stat133/stat133-hws-fall17/hw04/app")
 source("../code/functions.R")
 # input data.score
@@ -115,9 +116,9 @@ server <- function(input, output) {
   
   tab2_histogram %>% bind_shiny("histogram")
   
-  output$summary <- renderUI({
+  output$summary <- renderPrint({
     var2 <- prop("x", as.symbol(input$var2))
-    HTML(print_stats(unlist(data.score[,input$var2])))})
+    print_stats(unlist(data.score[,input$var2]))})
   
   # Scatterplot for tab3
   tab3_scatterplot <- reactive({
